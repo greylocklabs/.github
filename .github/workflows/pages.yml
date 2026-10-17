@@ -1,0 +1,26 @@
+name: pages
+
+# Publishes a folder to GitHub Pages. The caller grants pages: write and id-token: write:
+#   uses: greylocklabs/.github/.github/workflows/pages.yml@v1
+on:
+  workflow_call:
+    inputs:
+      path:
+        description: The folder to publish
+        type: string
+        default: www
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ inputs.path }}
+      - id: deploy
+        uses: actions/deploy-pages@v4

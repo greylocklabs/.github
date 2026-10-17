@@ -1,0 +1,27 @@
+name: markdownlint
+
+# Lints Markdown with the repository's own .markdownlint-cli2.yaml:
+#   uses: greylocklabs/.github/.github/workflows/markdownlint.yml@v1
+on:
+  workflow_call:
+    inputs:
+      version:
+        description: The markdownlint-cli2 version to run
+        type: string
+        default: 0.23.3
+
+permissions:
+  contents: read
+
+jobs:
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Lint Markdown
+        run: npx --yes "markdownlint-cli2@${{ inputs.version }}"

@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [$default-branch]
+
+permissions:
+  contents: read
+
+jobs:
+  commitlint:
+    uses: greylocklabs/.github/.github/workflows/commitlint.yml@v1
+
+  markdownlint:
+    uses: greylocklabs/.github/.github/workflows/markdownlint.yml@v1

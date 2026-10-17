@@ -1,0 +1,6 @@
+{
+  "name": "Greylock Labs CI",
+  "description": "Checks commit messages and Markdown with the shared workflows; add the repository's own jobs below it.",
+  "iconName": "octicon check-circle",
+  "categories": ["Automation"]
+}
