@@ -1,0 +1,48 @@
+{
+  "repository": {
+    "allow_merge_commit": false,
+    "allow_squash_merge": false,
+    "allow_rebase_merge": true,
+    "allow_auto_merge": true,
+    "delete_branch_on_merge": true
+  },
+  "ruleset": {
+    "name": "Protect main branch",
+    "target": "branch",
+    "enforcement": "active",
+    "conditions": { "ref_name": { "include": ["~DEFAULT_BRANCH"], "exclude": [] } },
+    "bypass_actors": [{ "actor_id": 5, "actor_type": "RepositoryRole", "bypass_mode": "always" }],
+    "rules": [
+      { "type": "deletion" },
+      { "type": "non_fast_forward" },
+      { "type": "required_linear_history" },
+      {
+        "type": "pull_request",
+        "parameters": {
+          "allowed_merge_methods": ["rebase"],
+          "dismiss_stale_reviews_on_push": false,
+          "require_code_owner_review": false,
+          "require_last_push_approval": false,
+          "required_approving_review_count": 0,
+          "required_review_thread_resolution": false
+        }
+      }
+    ]
+  },
+  "repos": {
+    "callie": {
+      "checks": ["commitlint", "format", "build (debian)", "build (fedora)", "docs"],
+      "strict": true
+    },
+    "jot": {
+      "checks": ["commitlint", "format", "build (debian)", "build (fedora)", "build (ubuntu)", "docs"],
+      "strict": true
+    },
+    "woodshed": {
+      "checks": ["lint", "test", "commitlint", "worker", "e2e"],
+      "strict": false
+    },
+    "web": { "checks": ["commitlint"], "strict": true },
+    ".github": { "checks": ["commitlint / commitlint", "markdownlint / markdownlint"], "strict": true }
+  }
+}
