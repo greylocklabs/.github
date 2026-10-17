@@ -43,6 +43,10 @@
       "strict": false
     },
     "web": { "checks": ["commitlint"], "strict": true },
+    "packages": {
+      "checks": ["commitlint / commitlint", "markdownlint / markdownlint", "shellcheck", "apt", "dnf"],
+      "strict": true
+    },
     ".github": { "checks": ["commitlint / commitlint", "markdownlint / markdownlint"], "strict": true }
   }
 }
