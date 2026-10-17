@@ -1,0 +1,14 @@
+{
+  "name": "greylocklabs-dotgithub",
+  "private": true,
+  "description": "Tooling for the Greylock Labs organization defaults",
+  "scripts": {
+    "commitlint": "commitlint --edit",
+    "lint:md": "markdownlint-cli2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.0",
+    "@commitlint/config-conventional": "^21.0.0",
+    "markdownlint-cli2": "^0.23.3"
+  }
+}
