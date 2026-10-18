@@ -47,6 +47,10 @@
       "checks": ["commitlint / commitlint", "markdownlint / markdownlint", "shellcheck", "apt", "dnf"],
       "strict": true
     },
+    "reports": {
+      "checks": ["commitlint / commitlint", "markdownlint / markdownlint", "test"],
+      "strict": true
+    },
     "themes": {
       "checks": ["commitlint / commitlint", "markdownlint / markdownlint", "ports"],
       "strict": true
