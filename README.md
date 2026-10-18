@@ -6,7 +6,7 @@
 
 - `profile/README.md` is the organization's profile on
   [github.com/greylocklabs](https://github.com/greylocklabs).
-- `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `FUNDING.yml` and `ISSUE_TEMPLATE/` are the
+- `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `FUNDING.yml` and `.github/ISSUE_TEMPLATE/` are the
   defaults GitHub shows for any repository without its own copy.
 - `.github/workflows/` holds reusable workflows, called by tag:
 
