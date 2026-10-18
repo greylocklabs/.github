@@ -1,0 +1,34 @@
+name: Bug report
+description: Something in a Greylock Labs app isn't working
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. ...
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: >-
+        For Callie or Jot, the output of `callie doctor` or `jot doctor`, or "Copy debug info" from
+        the app's ? menu. For Woodshed, the app's version and your Android version. Email addresses
+        are already masked; check it for anything else you would rather not share.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: For anything visual. Drag images in here.
