@@ -7,6 +7,7 @@ const scopes = [
   "workflows", // the reusable workflows and templates
   "ci",
   "deps",
+  "deps-dev", // Dependabot's updates to development dependencies
 ];
 
 /** @type {import('@commitlint/types').UserConfig} */
