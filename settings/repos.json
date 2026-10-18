@@ -31,18 +31,18 @@
   },
   "repos": {
     "callie": {
-      "checks": ["commitlint", "format", "build (debian)", "build (fedora)", "docs"],
+      "checks": ["commitlint / commitlint", "format", "build (debian)", "build (fedora)", "docs"],
       "strict": true
     },
     "jot": {
-      "checks": ["commitlint", "format", "build (debian)", "build (fedora)", "build (ubuntu)", "docs"],
+      "checks": ["commitlint / commitlint", "format", "build (debian)", "build (fedora)", "build (ubuntu)", "docs"],
       "strict": true
     },
     "woodshed": {
-      "checks": ["lint", "test", "commitlint", "worker", "e2e"],
+      "checks": ["lint", "test", "commitlint / commitlint", "worker", "e2e"],
       "strict": false
     },
-    "web": { "checks": ["commitlint"], "strict": true },
+    "web": { "checks": ["commitlint / commitlint"], "strict": true },
     "packages": {
       "checks": ["commitlint / commitlint", "markdownlint / markdownlint", "shellcheck", "apt", "dnf"],
       "strict": true
