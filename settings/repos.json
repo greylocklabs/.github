@@ -39,7 +39,7 @@
       "strict": true
     },
     "woodshed": {
-      "checks": ["lint", "test", "commitlint / commitlint", "worker", "e2e"],
+      "checks": ["lint", "test", "commitlint / commitlint", "e2e"],
       "strict": false
     },
     "web": { "checks": ["commitlint / commitlint"], "strict": true },
