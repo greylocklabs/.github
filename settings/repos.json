@@ -47,7 +47,10 @@
       "checks": ["commitlint / commitlint", "markdownlint / markdownlint", "shellcheck", "apt", "dnf"],
       "strict": true
     },
-    "core": { "checks": ["commitlint / commitlint", "markdownlint / markdownlint", "tooling"], "strict": true },
+    "core": {
+      "checks": ["commitlint / commitlint", "markdownlint / markdownlint", "tooling", "cpp (fedora)", "cpp (debian)"],
+      "strict": true
+    },
     "reports": {
       "checks": ["commitlint / commitlint", "markdownlint / markdownlint", "test"],
       "strict": true
