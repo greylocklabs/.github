@@ -31,7 +31,14 @@
   },
   "repos": {
     "callie": {
-      "checks": ["commitlint / commitlint", "format", "build (debian)", "build (fedora)", "docs"],
+      "checks": [
+        "commitlint / commitlint",
+        "format",
+        "build (debian)",
+        "build (fedora)",
+        "docs",
+        "packages"
+      ],
       "strict": true
     },
     "jot": {
@@ -42,12 +49,13 @@
         "build (fedora)",
         "build (ubuntu)",
         "docs",
-        "sync with S3"
+        "sync with S3",
+        "packages"
       ],
       "strict": true
     },
     "woodshed": {
-      "checks": ["lint", "test", "commitlint / commitlint", "e2e"],
+      "checks": ["lint", "test", "commitlint / commitlint", "e2e", "release"],
       "strict": false
     },
     "web": { "checks": ["commitlint / commitlint"], "strict": true },
