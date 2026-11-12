@@ -35,7 +35,15 @@
       "strict": true
     },
     "jot": {
-      "checks": ["commitlint / commitlint", "format", "build (debian)", "build (fedora)", "build (ubuntu)", "docs"],
+      "checks": [
+        "commitlint / commitlint",
+        "format",
+        "build (debian)",
+        "build (fedora)",
+        "build (ubuntu)",
+        "docs",
+        "sync with S3"
+      ],
       "strict": true
     },
     "woodshed": {
@@ -48,7 +56,14 @@
       "strict": true
     },
     "core": {
-      "checks": ["commitlint / commitlint", "markdownlint / markdownlint", "tooling", "cpp (fedora)", "cpp (debian)"],
+      "checks": [
+        "commitlint / commitlint",
+        "markdownlint / markdownlint",
+        "tooling",
+        "cpp (fedora)",
+        "cpp (debian)",
+        "android"
+      ],
       "strict": true
     },
     "reports": {
